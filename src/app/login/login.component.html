@@ -1,0 +1,37 @@
+<mat-card class="example-card">
+    <mat-card *ngIf="message" class="text-center error">
+      <span *ngIf="message" >  {{message}}</span>
+   </mat-card>
+   <mat-card-header>
+     <mat-card-title>Login</mat-card-title>
+    <alert></alert>
+   </mat-card-header>
+
+   <form [formGroup]="loginForm" class="my-form" (ngSubmit)="login()">
+   <mat-card-content>
+
+       <table class="example-full-width" cellspacing="0">
+         <tr>
+           <td>
+             <mat-form-field class="example-full-width">
+             <input matInput placeholder="Username" formControlName="username"name="username" required>
+             </mat-form-field>
+           </td>
+         </tr>
+         <tr>
+         <td><mat-form-field class="example-full-width">
+           <input matInput placeholder="Password" formControlName="password" type="password" name="password" required>
+         </mat-form-field></td>
+       </tr></table>
+     
+     
+   </mat-card-content>
+   <mat-card-actions>
+     <button mat-raised-button   color="primary">Login</button>
+      <!--  <a style="float: right;" href="/Registration">Registration</a> -->
+   </mat-card-actions>
+    </form>
+   <mat-card-actions>
+    
+    </mat-card-actions>
+ </mat-card>
